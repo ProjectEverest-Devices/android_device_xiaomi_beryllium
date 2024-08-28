@@ -4,10 +4,24 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Inherit from beryllium device
 $(call inherit-product, device/xiaomi/beryllium/device.mk)
 
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+
+# Boot Animation
+TARGET_BOOT_ANIMATION_RES := 1080
+
+# Maintainer
+EVEREST_BUILD_TYPE := OFFICIAL
+EVEREST_MAINTAINER := Akshat
+
+# Everest Flags
+TARGET_SUPPORTS_BLUR := true
+WITH_GAPPS := true
+TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := true
+TARGET_DEFAULT_PIXEL_LAUNCHER := true
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := lineage_beryllium
